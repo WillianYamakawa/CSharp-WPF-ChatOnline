@@ -1,4 +1,4 @@
-﻿using ChatServer.Net.IO;
+using ChatServer.Net.IO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -54,7 +54,7 @@ namespace ChatServer
 				user.ClientSocket.Client.Send(BroadcastPacket.GetPacketBytes());
 			}
 
-			BroadcastMessage($"[{disconnectedUser.Username}] Disconnected!");
+			BroadcastMessage($"{disconnectedUser.Username}: ---[Disconnected!]---");
 		}
 
 		public static void BroadcastMessage(string message)
