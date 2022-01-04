@@ -1,0 +1,39 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="ListViewItem" x:Key="UserCard">
+        <Setter Property="Background" Value="#393b40"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                    <Border Background="{TemplateBinding Background}"
+                            Height="50"
+                            CornerRadius="4"
+                            Margin="8, 2, 8, 2">
+
+                        <StackPanel Orientation="Horizontal"
+                                    Margin="10, 0, 0, 0"
+                                    VerticalAlignment="Center">
+
+                            <Ellipse Width="30" Height="30"
+                                    >
+                                <Ellipse.Fill>
+                                    <ImageBrush ImageSource="https://i.pinimg.com/originals/71/f3/51/71f3519243d136361d81df71724c60a0.png" RenderOptions.BitmapScalingMode="Fant"/>
+                                </Ellipse.Fill>
+                            </Ellipse>
+
+                                <Label Content="{Binding Username}"
+                                   Foreground="White"
+                                   Margin="5, 0, 0, 0"/>
+
+
+                        </StackPanel>
+                                    
+                        
+                    </Border>
+
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
